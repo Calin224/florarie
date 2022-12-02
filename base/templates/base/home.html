@@ -1,0 +1,141 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+
+        .hero_des {
+            font-family: 'Sorts Mill Goudy';
+        }
+
+        #hero_img {
+            animation-name: slide-left;
+            animation-duration: 1s;
+            transition: transform 0.2s ease-in-out;
+
+        }
+
+        #hero_img:hover {
+            transform: scale(0.9);
+        }
+
+        #hero_text {
+            animation-name: slide-right;
+            animation-duration: 1s;
+            font-family: 'Cinzel';
+        }
+
+        @keyframes slide-left {
+            0% {
+                translate: 150px;
+            }
+            100% {
+                translate: 0px;
+            }
+        }
+
+        @keyframes slide-right {
+            0% {
+                translate: -200px;
+            }
+            100% {
+                translate: 0px;
+            }
+        }
+    </style>
+
+    <section class="bg-white ">
+        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="mr-auto place-self-center lg:col-span-7">
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-center lg:text-left"
+                    id="hero_text">
+                    Floraria Adriana</h1>
+                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl lg:text-left text-center hero_des">
+                    Dăruitul florilor este un gest veșnic la modă
+                    Nu poate fi înlocuit cu nimic acest gest atât de personal care emană în acelaşi timp emoţia celui
+                    care primeşte, şi a celui care oferă flori.</p>
+
+                <div class="flex justify-center items-center lg:block">
+                    <a href="#" style="font-family: 'Cinzel'"
+                       class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">
+                        COMANDA OFFLINE
+                    </a>
+                    <a href="#" style="font-family: 'Cinzel'"
+                       class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">
+                        COMANDA ONLINE
+                    </a>
+                </div>
+
+            </div>
+            <div class="lg:mt-0 lg:col-span-5 lg:flex mt-20 lg:mt-0">
+                <img src="{% static 'images/hero_image.jpeg' %}" alt="" id="hero_img">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-10">
+        <div class="flex justify-center items-center flex-col">
+            <h1 class="text-2xl font-bold pb-4" style="font-family: 'Cinzel'">Comenzile on-line</h1>
+            <div class="inline-flex justify-center items-center w-full pb-4">
+                <hr class="my-2 w-64 h-1 bg-black rounded border-0">
+                <div class="absolute left-1/2 px-4 bg-gray-100 -translate-x-1/2 ">
+                    <svg aria-hidden="true" class="w-5 h-5 text-black " viewBox="0 0 24 27"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                              fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+            <p class="text-gray-600 text-center pb-6" style="font-family: 'Sorts Mill Goudy'">După configurarea și
+                trimiterea comenzii de pe site, în urma unui contact telefonic, când vă ve-ți prezenta<br> la punctul
+                nostru
+                de lucru pentru ridicarea comenzii aceasta este deja pregătită.</p>
+            <button class="p-2 bg-transparent hover:bg-gray-900 border-2 hover:text-white border-gray-900"
+                    style="font-family: 'Cinzel'">Comanda ONLINE
+            </button>
+        </div>
+    </section>
+
+    <section class="mt-10 mb-10 flex justify-center items-center space-x-12">
+        <div>
+            <a href="#"
+               class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
+                    Noteworthy technology
+                    acquisitions 2021</h5>
+                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Here are the biggest
+                    enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+            </a>
+        </div>
+        <div>
+            <a href="#"
+               class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
+                    Noteworthy technology
+                    acquisitions 2021</h5>
+                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Here are the biggest
+                    enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+            </a>
+        </div>
+        <div>
+            <a href="#"
+               class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
+                    Noteworthy technology
+                    acquisitions 2021</h5>
+                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Here are the biggest
+                    enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+            </a>
+        </div>
+
+    </section>
+
+{% endblock %}
