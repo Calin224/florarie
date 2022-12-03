@@ -8,6 +8,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
 
+        .title{
+             font-family: 'Cinzel';
+        }
+
+        .text{
+            font-family: 'Sorts Mill Goudy';
+        }
+
         .hero_des {
             font-family: 'Sorts Mill Goudy';
         }
@@ -27,6 +35,32 @@
             animation-name: slide-right;
             animation-duration: 1s;
             font-family: 'Cinzel';
+        }
+
+        .last-tr{
+            animation-name: slide-left;
+            animation-duration: 1s;
+        }
+
+        .first-tr{
+            animation-name: slide-right;
+            animation-duration: 1s;
+        }
+
+        .mid-tr{
+            animation-name: slide-up;
+            animation-duration: 1s;
+        }
+
+        @keyframes slide-up {
+            0%{
+                opacity: 0;
+                transform: translateY(200px);
+            }
+            100%{
+                opacity: 100;
+                transform: translateY(0px);
+            }
         }
 
         @keyframes slide-left {
@@ -101,39 +135,123 @@
         </div>
     </section>
 
-    <section class="mt-10 mb-10 flex justify-center items-center space-x-12">
+    <section
+            class="mt-10 mb-10 flex justify-around md:space-x-6 items-center flex-col lg:flex-row space-y-12 lg:space-y-0">
         <div>
             <a href="#"
                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
-                    Noteworthy technology
-                    acquisitions 2021</h5>
-                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Here are the biggest
-                    enterprise technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                    Produse FLORĂRIA ADRIANA</h5>
+                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Categoria aceasta
+                    reprezintă produsele realizate exclusiv de firma noastră.</p>
             </a>
         </div>
         <div>
             <a href="#"
                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
-                    Noteworthy technology
-                    acquisitions 2021</h5>
-                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Here are the biggest
-                    enterprise technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                    Pentru comenzi contactați-ne</h5>
+                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">După finalizarea
+                    configurării comenzii, finalizați procesul prin trimiterea ei către noi, astfel încât în timpul
+                    discuției telefonice ulterioare noi avem deja creeată o imagine de ansamblu care ne va folosi
+                    pentru a vă satisface pe deplin așteptările.</p>
             </a>
         </div>
         <div>
             <a href="#"
                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
-                    Noteworthy technology
-                    acquisitions 2021</h5>
-                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Here are the biggest
-                    enterprise technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                    Ridicați comanda</h5>
+                <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">La prezentarea la
+                    puctul nostru de lucru pentru ridicarea comenzii, aceasta va fi executată deja conform celor
+                    stalibite anterior.</p>
             </a>
+        </div>
+    </section>
+    <div class="flex justify-center items-center flex-col mb-12 bg-gray-100 p-4">
+        <h1 class="font-extrabold text-black text-4xl mb-6 hover:underline transition-all ease-in-out" style="font-family: 'Cinzel';">Oferta zilei</h1>
+
+        <div class="flex flex-row space-x-10">
+            <button class="p-2 border-2 border-gray-900 bg-transparent hover:bg-gray-900 hover:text-white transition-all" style="font-family: 'Sorts Mill Goudy'">
+                Comanda ONLINE
+            </button>
+            <button class="p-2 border-2 border-gray-900 bg-transparent hover:bg-gray-900 hover:text-white transition-all"  style="font-family: 'Sorts Mill Goudy'">
+                Comanda OFFLINE
+            </button>
+        </div>
+
+    </div>
+    <section class="flex justify-around items-center flex-col lg:flex-row mb-24 space-y-12 lg:space-y-0">
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-110 transition-all ease-in-out first-tr">
+            <a href="#" class="w-full flex justify-center">
+                <img class="rounded-t-lg object-contain max-h-56" src="{% static 'images/news-11.jpeg' %}" alt=""/>
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Noteworthy
+                        technology acquisitions 2021</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Here are the biggest enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <a href="#"
+                   class="hover:scale-110 transition-all ease-in-out inline-flex items-center pr-3 py-2 text-sm font-medium text-center text-black">
+                    Read more
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                              clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-110 transition-all ease-in-out mid-tr">
+            <a href="#" class="w-full flex justify-center">
+                <img class="rounded-t-lg object-contain max-h-56" src="{% static 'images/news-13.jpeg' %}" alt=""/>
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Noteworthy
+                        technology acquisitions 2021</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Here are the biggest enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <a href="#"
+                   class="hover:scale-110 transition-all ease-in-out inline-flex items-center pr-3 py-2 text-sm font-medium text-center text-black">
+                    Read more
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                              clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-110 transition-all ease-in-out last-tr">
+            <a href="#" class="w-full flex justify-center">
+                <img class="rounded-t-lg object-contain max-h-56 " src="{% static 'images/news-14.jpeg' %}" alt=""/>
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Noteworthy
+                        technology acquisitions 2021</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Here are the biggest enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <a href="#"
+                   class="hover:scale-110 transition-all ease-in-out inline-flex items-center pr-3 py-2 text-sm font-medium text-center text-black">
+                    Read more
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                              clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
 
     </section>
