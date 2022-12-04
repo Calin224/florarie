@@ -1,0 +1,86 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+
+        .title {
+            font-family: 'Cinzel';
+        }
+
+        .text {
+            font-family: 'Sorts Mill Goudy';
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+
+
+    <div class="mb-4 border-b border-gray-200 ">
+        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent"
+            role="tablist">
+            <li class="mr-2" role="presentation">
+                <button class="inline-block p-4 rounded-t-lg border-b-2 title text-xl" id="profile-tab"
+                        data-tabs-target="#nunta"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Nunta
+                </button>
+            </li>
+            <li class="mr-2" role="presentation">
+                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 title text-xl"
+                        id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                        aria-controls="dashboard" aria-selected="false">Botez
+                </button>
+            </li>
+            <li class="mr-2" role="presentation">
+                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 title text-xl"
+                        id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
+                        aria-selected="false">Funerare
+                </button>
+            </li>
+            <li role="presentation">
+                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 title text-xl"
+                        id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
+                        aria-selected="false">Altele
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="myTabContent">
+        <div class="hidden p-4 bg-gray-50 rounded-l" id="nunta" role="tabpanel"
+             aria-labelledby="profile-tab">
+            {#    https://dummyimage.com/200x100/000/fff#}
+
+            {% for product in products %}
+            <a href="#"
+               class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 ">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                     src="https://dummyimage.com/600x400/000/fff" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ product.name }}</h5>
+                    <p class="mb-3 font-normal text-gray-700 ">{{ product.price }} de lei</p>
+                </div>
+            </a>
+            {% endfor %}
+
+
+        </div>
+        <div class="hidden p-4 bg-gray-50 rounded-lg " id="dashboard" role="tabpanel"
+             aria-labelledby="dashboard-tab">
+            <h1>Botez</h1>
+        </div>
+        <div class="hidden p-4 bg-gray-50 rounded-lg " id="settings" role="tabpanel"
+             aria-labelledby="settings-tab">
+            <h1>Funerare</h1>
+        </div>
+        <div class="hidden p-4 bg-gray-50 rounded-lg " id="contacts" role="tabpanel"
+             aria-labelledby="contacts-tab">
+            <h1>Altele</h1>
+        </div>
+    </div>
+
+
+{% endblock %}

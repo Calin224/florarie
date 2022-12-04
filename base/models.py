@@ -7,6 +7,7 @@ class Product(models.Model):
     resume = models.TextField(null=True, blank=True)
     description = models.TextField(blank=True, null=True)
     code = models.CharField(max_length=10)
+    price = models.CharField(max_length=100,null=True, blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
