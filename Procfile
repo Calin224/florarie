@@ -1,1 +1,1 @@
-web:gunicorn florarie.wsgi --log-file -
+web: gunicorn florarie.wsgi --log-file -
