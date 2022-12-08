@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-2j2vn3c!*t&ma+5038o*%z%0wcr31i8+1(pe3#km^bo6h15^0j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'floraria.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'floraria.herokuapp.com', 'localhost', 'www.qwerty-uiop.com', 'qwerty-uiop.com']
 
 # Application definition
 
