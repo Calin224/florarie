@@ -44,7 +44,7 @@
                 <img class=" object-contain max-h-56 rounded-lg m-6" style="width: 300px;height: 150px;" src="{{ product.image.url }}" alt="image"/>
             </a>
             <div class="p-5">
-                <a href="#">
+                <a href="{% url 'product' product.id %}">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">{{ product.name }}</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">{{ product.price }}</p>
