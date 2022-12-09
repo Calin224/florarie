@@ -11,7 +11,7 @@ def homePage(request):
 def productsPage(request):
     category = request.GET.get('category')
     if category == None:
-        products = Product.objects.all()
+        products = Product.objects.all()[0:3]
     else:
         products = Product.objects.filter(category__name__icontains=category)
 
