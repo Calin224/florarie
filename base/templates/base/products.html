@@ -70,8 +70,12 @@
             <div class="flex space-x-4">
                 {% if products_p.has_previous %}
                     <a href="?page=1">Primul</a>
-
-                    <a href="?page={{ products_p.previous_page_number }}">Inapoi</a>
+                    <a href="?page={{ products_p.previous_page_number }}">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                             clip-rule="evenodd">
+                            <path d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z"/>
+                        </svg>
+                    </a>
                 {% endif %}
             </div>
             <div class="mx-4">
@@ -79,7 +83,12 @@
             </div>
             <div class="flex space-x-4">
                 {% if products_p.has_next %}
-                    <a href="?page={{ products_p.next_page_number }}">Urmatorul</a>
+                    <a href="?page={{ products_p.next_page_number }}">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                             clip-rule="evenodd">
+                            <path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"/>
+                        </svg>
+                    </a>
 
                     <a href="?page={{ products_p.paginator.num_pages }}">Final</a>
                 {% endif %}
