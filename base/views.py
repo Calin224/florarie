@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Product, Category
 
 from django.core.paginator import Paginator
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -38,5 +39,16 @@ def productPage(request, pk):
     context = {'product': product}
     return render(request, 'base/product.html', context)
 
+
 def contactPage(request):
-    return render(request, 'base/contact.html')
+    # get form data
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        subject = request.POST.get('subject', '')
+        message = request.POST.get('message', '')
+
+        send_mail(subject, message, email, ['sanducalinm@gmail.com'])
+
+    context = {}
+    return render(request, 'base/contact.html', context)

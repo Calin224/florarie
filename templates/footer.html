@@ -1,48 +1,36 @@
 {% load static %}
 
 
-<footer class="bg-gray-100" aria-labelledby="footer-heading">
-    <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20">
-        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div class="space-y-8 xl:col-span-1">
-                <a href="./index.html"
-                   class="text-lg font-bold tracking-tighter text-gray-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8">
+<footer class="bg-gray-100 w-full" aria-labelledby="footer-heading">
+    <div class="px-5 py-12 mx-auto max-w-7xl lg:py-10 md:px-12 lg:px-20 w-full">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8 w-full">
+            <div class="space-y-8 xl:col-span-1 ">
+                <a href="{% url 'home' %}"
+                   class="text-lg font-bold tracking-tighter  text-gray-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8">
                     floraria adriana </a>
-                <p class="w-full mt-2 text-sm text-gray-500 pr-12">Vizitează online o florărie pentru Craiova atunci
-                    când
-                    dorești să trimiți simplu și rapid buchete de flori sau aranjamente florale pentru aniversări, nunți
-                    sau botezuri, sau când dorești să îi faci o bucurie persoanei iubite. Ne mândrim cu o livrare rapidă
-                    de flori în Craiova, pentru situațiile când dorești să faci un cadou deosebit și elegant unei ființe
-                    dragi
-
-                </p>
             </div>
-            <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
-                <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div class="grid grid-cols-1 gap-8 mt-12 xl:mt-0 xl:col-span-3">
+                <div class="md:grid md:grid-cols-3 md:gap-8">
                     <div>
                         <h3 class="text-xs font-semibold tracking-wider text-gray-800 uppercase">Legaturi utile</h3>
                         <ul role="list" class="mt-4 space-y-4">
                             <li>
-                                <a href="#" class="text-sm font-normal text-gray-500 hover:text-gray-900">
+                                <a href="{% url 'home' %}"
+                                   class="text-sm font-normal text-gray-500 hover:text-gray-900">
                                     Despre Noi </a>
                             </li>
 
                             <li>
-                                <a href="#" class="text-sm font-normal text-gray-500 hover:text-gray-900">
+                                <a href="{% url 'products' %}"
+                                   class="text-sm font-normal text-gray-500 hover:text-gray-900">
                                     Produsele Noastre </a>
                             </li>
 
                             <li>
-                                <a href="#" class="text-sm font-normal text-gray-500 hover:text-gray-900"> Contact </a>
+                                <a href="{% url 'contact' %}"
+                                   class="text-sm font-normal text-gray-500 hover:text-gray-900"> Contact </a>
                             </li>
 
-                            <li>
-                                <a href="#" class="text-sm font-normal text-gray-500 hover:text-gray-900">
-                                    <img src="{% static 'images/cards.png' %}" alt="image">
-
-                                </a>
-                            </li>
                         </ul>
                     </div>
                     <div class="mt-12 md:mt-0">
@@ -70,16 +58,21 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="hidden lg:justify-end md:grid md:grid-cols-1">
-                    <div class="w-full mt-12 md:mt-0">
+
+                    <div class="mt-12 md:mt-0">
                         <div class="mt-8 lg:justify-end xl:mt-0">
                             <h3 class="text-xs font-semibold tracking-wider text-gray-800 uppercase">Cont ALPHA
-                                BANK: </h3>
+                                BANK ROMANIA: </h3>
                             <p class="mt-4 text-sm text-gray-500 lg:ml-auto font-bold">RO53BUCU1921304256136RON</p>
+                            <a href="#" class="">
+                                <img src="{% static 'images/cards.png' %}" alt="image" style="width: 250px; height: auto">
+                            </a>
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
