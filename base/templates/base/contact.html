@@ -18,11 +18,17 @@
         .hero_des {
             font-family: 'Sorts Mill Goudy';
         }
+
+        #map {
+            height: 500px;
+            width: 100%;
+        }
     </style>
 
     <section class="bg-white ">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 title">Contactați TREI
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 title uppercase">Contactați
+                TREI
                 FLORI SRL
                 Florăria Adriana</h2>
             <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl text">Vă stăm la dispoziție cu
@@ -64,6 +70,29 @@
         </div>
     </section>
 
+    <div id="map"></div>
+
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8adSoJHmST9xilxaFwewwIpangVQe_Cw&callback=initMap">
+    </script>
+
+    <script>
+        var map;
+
+        function initMap() {
+            var sydney = new google.maps.LatLng(44.317100583251516, 23.816239499457776);
+
+
+            map = new google.maps.Map(
+                document.getElementById('map'), {center: sydney, zoom: 17});
+
+            const marker = new google.maps.Marker({
+                position: {lat: 44.31715840798294, lng: 23.815974404574906},
+                map: map,
+                title: "floraria adriana"
+            });
+        }
+    </script>
 
 
 {% endblock %}

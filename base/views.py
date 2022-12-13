@@ -14,17 +14,18 @@ def productsPage(request):
     category = request.GET.get('category')
     if category == None:
         # products = Product.objects.all()[0:3]
-        p = Paginator(Product.objects.all(), 2)
+        p = Paginator(Product.objects.all(), 5)
         page = request.GET.get('page')
         products_p = p.get_page(page)
         count = Product.objects.all().count()
         page = 'toate'
     else:
-        # products = Product.objects.filter(category__name__icontains=category)
-        p = Paginator(Product.objects.filter(category__name__icontains=category), 2)
-        page = request.GET.get('page')
-        products_p = p.get_page(page)
-        count = Product.objects.filter(category__name__icontains=category).count()
+        products_p = Product.objects.filter(category__name__icontains=category)
+        # p = Paginator(Product.objects.filter(category__name__icontains=category), 2)
+        # page = request.GET.get('page')
+        # products_p = p.get_page(page)
+        # count = Product.objects.filter(category__name__icontains=category).count()
+        count = products_p.count()
         page = 'category'
 
     categories = Category.objects.all()
