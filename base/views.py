@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.template.loader import get_template
+
 from .models import Product, Category
 
 from django.core.paginator import Paginator
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
 
 
 # Create your views here.
@@ -41,14 +43,24 @@ def productPage(request, pk):
 
 
 def contactPage(request):
-    # get form data
     if request.method == 'POST':
         name = request.POST.get('name', '')
         email = request.POST.get('email', '')
         subject = request.POST.get('subject', '')
         message = request.POST.get('message', '')
+        files = request.FILES.getlist('files')
 
-        send_mail(subject, message, email, ['sanducalinm@gmail.com'])
+        context_data = {'name': name, 'email': email, 'subject': subject, 'message': message, 'files': files}
+
+        print(files)
+
+        html_content = get_template('base/email.html').render(context_data)
+
+        msg = EmailMultiAlternatives(subject, message, email, ['sanducalinm@gmail.com'])
+        msg.attach_alternative(html_content, "text/html")
+        for f in files:
+            msg.attach(f.name, f.read(), f.content_type)
+        msg.send()
 
     context = {}
     return render(request, 'base/contact.html', context)
