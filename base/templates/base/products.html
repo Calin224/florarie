@@ -59,13 +59,10 @@
             {% endfor %}
         </ul>
     </div>
-    {% if count != 0 %}
-        <h1 class="text-center">{{ count }} produse gasite in {{ category.name }}</h1>
-    {% endif %}
-    <div class="container mx-auto flex justify-center items-center flex-wrap gap-12 mb-24 mt-4">
+    <div class="flex justify-center items-center gap-12 flex-wrap">
         {% for product in products_p %}
             <a href="{% url 'product' product.id %}">
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-105 transition-all ease-in-out first-tr">
+                <div class="col-span-1 max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-105 transition-all ease-in-out first-tr">
                     {% if product.image.url is not None %}
                         <a href="{% url 'product' product.id %}" class="w-full flex justify-center">
                             <img class=" object-contain max-h-56 rounded-lg m-6" style="width: 300px;height: 150px;"
