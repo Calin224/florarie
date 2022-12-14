@@ -17,7 +17,7 @@ def productsPage(request):
     category = request.GET.get('category')
     if category == None:
         # products = Product.objects.all()[0:3]
-        p = Paginator(Product.objects.all(), 5)
+        p = Paginator(Product.objects.all(), 6)
         page = request.GET.get('page')
         products_p = p.get_page(page)
         count = Product.objects.all().count()
