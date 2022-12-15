@@ -31,6 +31,7 @@ def productsPage(request):
         count = products_p.count()
         page = 'category'
 
+
     categories = Category.objects.all()
     context = {'categories': categories, 'products_p': products_p, 'count': count, 'page': page, 'category': category}
     return render(request, 'base/products.html', context)
