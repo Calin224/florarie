@@ -105,7 +105,7 @@
             border-radius: 20px;
         }
 
-        #offer{
+        #offer {
             background: url("{% static 'images/oferta.jpeg' %}");
             background-attachment: fixed;
             background-size: cover;
@@ -120,7 +120,7 @@
                     id="hero_text">
                     Floraria Adriana</h1>
                 <p class="max-w-2xl mb-6 font-bold text-gray-700 lg:mb-8 md:text-lg lg:text-xl text-center hero_des">
-                    Dăruitul florilor este un gest veșnic la modă
+                    Dăruitul florilor este un gest veșnic la modă.
                     Nu poate fi înlocuit cu nimic acest gest atât de personal care emană în acelaşi timp emoţia celui
                     care primeşte, şi a celui care oferă flori.</p>
 
@@ -168,16 +168,16 @@
     <section
             class="mt-10 mb-10 flex justify-around md:space-x-6 items-center flex-col lg:flex-row space-y-12 lg:space-y-0">
         <div>
-            <a href="#"
+            <div
                class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
                     Produse FLORĂRIA ADRIANA</h5>
                 <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">Categoria aceasta
                     reprezintă produsele realizate exclusiv de firma noastră.</p>
-            </a>
+            </div>
         </div>
         <div>
-            <a href="#"
+            <div
                class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
                     Pentru comenzi contactați-ne</h5>
@@ -185,17 +185,17 @@
                     configurării comenzii, finalizați procesul prin trimiterea ei către noi, astfel încât în timpul
                     discuției telefonice ulterioare noi avem deja creeată o imagine de ansamblu care ne va folosi
                     pentru a vă satisface pe deplin așteptările.</p>
-            </a>
+            </div>
         </div>
         <div>
-            <a href="#"
+            <div
                class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" style="font-family: 'Cinzel'">
                     Ridicați comanda</h5>
                 <p class="font-normal text-gray-700 " style="font-family: 'Sorts Mill Goudy'">La prezentarea la
                     puctul nostru de lucru pentru ridicarea comenzii, aceasta va fi executată deja conform celor
                     stalibite anterior.</p>
-            </a>
+            </div>
         </div>
     </section>
     <div class="flex justify-center items-center flex-col mb-12 bg-gray-100 p-4 py-12" id="offer">
@@ -218,20 +218,18 @@
     </div>
     <section class="flex justify-around items-center flex-col lg:flex-row mb-24 space-y-12 lg:space-y-0">
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-105 transition-all ease-in-out first-tr">
-            <a href="#" class="w-full flex justify-center">
+            <a href="{% url 'products' %}" class="w-full flex justify-center">
                 <img class="rounded-t-lg object-contain max-h-56 p-12" src="{% static 'images/news-11.jpeg' %}" alt=""/>
             </a>
             <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Noteworthy
-                        technology acquisitions 2021</h5>
+                <a href="{% url 'products' %}">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Buchete cu gerbera</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Here are the biggest enterprise
-                    technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
-                <a href="#"
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Buchete cu gerbera - Gerbera a fost
+                    descoperită pentru prima oară în 1884 lângă Barberton, Africa de Sud, de către...</p>
+                <a href="{% url 'products' %}"
                    class="hover:scale-110 transition-all ease-in-out inline-flex items-center pr-3 py-2 text-sm font-medium text-center text-black">
-                    Read more
+                    Citeste mai mult
                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
                          xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -243,20 +241,17 @@
         </div>
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-110 transition-all ease-in-out mid-tr">
-            <a href="#" class="w-full flex justify-center">
+            <a href="{% url 'products' %}" class="w-full flex justify-center">
                 <img class="rounded-t-lg object-contain max-h-56 p-10" src="{% static 'images/news-13.jpeg' %}" alt=""/>
             </a>
             <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Noteworthy
-                        technology acquisitions 2021</h5>
+                <a href="{% url 'products' %}">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Buchete cu crizantema</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Here are the biggest enterprise
-                    technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
-                <a href="#"
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Fiind precizată în scrieri vechi, cu o istorie care datează încă din sec 15 i.Hr., crizantema are o sumedenie de si...</p>
+                <a href="{% url 'products' %}"
                    class="hover:scale-110 transition-all ease-in-out inline-flex items-center pr-3 py-2 text-sm font-medium text-center text-black">
-                    Read more
+                    Citeste mai mult
                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
                          xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -268,20 +263,17 @@
         </div>
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md hover:scale-110 transition-all ease-in-out last-tr">
-            <a href="#" class="w-full flex justify-center">
+            <a href="{% url 'products' %}" class="w-full flex justify-center">
                 <img class="rounded-t-lg object-contain max-h-56 " src="{% static 'images/news-14.jpeg' %}" alt=""/>
             </a>
             <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Noteworthy
-                        technology acquisitions 2021</h5>
+                <a href="{% url 'products' %}">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 title">Buchete cu frezia</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">Here are the biggest enterprise
-                    technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
-                <a href="#"
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text">În comparație cu alte flori rezultate din cultivări incrucișate și hibridări, frezia este o floare destul de recen...</p>
+                <a href="{% url 'products' %}"
                    class="hover:scale-110 transition-all ease-in-out inline-flex items-center pr-3 py-2 text-sm font-medium text-center text-black">
-                    Read more
+                    Citeste mai mult
                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
                          xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
