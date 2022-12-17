@@ -4,7 +4,7 @@
 
     <section class="pt-12 pl-12">
 
-        <nav class="flex" aria-label="Breadcrumb">
+        <nav class="flex justify-start" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-3">
                 <li class="inline-flex items-center">
                     <a href="{% url 'home' %}"
@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li aria-current="page">
-                    <a href="#">
+                    <a href="">
                         <div class="flex items-center">
                             <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +87,7 @@
 
                         </span>
                     {% if product.price is not None %}
-                        <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                        <button class="flex ml-auto text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded">
                             Cod Produs: {{ product.code }}
                         </button>
                     {% endif %}
