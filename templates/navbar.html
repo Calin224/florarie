@@ -15,9 +15,13 @@
     </div>
 </nav>
 <nav class="bg-gray-50 flex justify-center items-center flex-col">
-    <div class="flex items-center justify-center mt-7">
-            <a href="tel:+40751296292" class=" text-sm font-medium text-gray-500 hover:underline" style="font-family: 'Cinzel'">0751 296 292</a>
-        </div>
+    <div class="flex items-center justify-center mt-7 space-x-4">
+        <a href="tel:+40751296292" class=" text-sm font-medium text-gray-500 hover:underline"
+           style="font-family: 'Cinzel'">0751 296 292</a>
+        <a href="https://wa.link/pj9jh5" class="text-sm font-medium text-gray-500 hover:underline" style="font-family: 'Cinzel'">
+            <img src="{% static 'images/icons8-whatsapp-94.png' %}" alt="whatsapp" class="w-10">
+        </a>
+    </div>
     <div class="max-w-screen-xl px-4 py-3 mx-auto md:px-6 mb-7">
         <div class="flex items-center justify-center">
             <ul class="flex flex-row mt-0 text-sm font-medium space-x-8">
@@ -28,7 +32,7 @@
                     <a href="{% url 'products' %}" class="text-gray-900  hover:underline" style="font-family: 'Cinzel'">PRODUSE</a>
                 </li>
                 <li>
-                     <a href="{% url 'contact' %}" class="text-gray-900  hover:underline" style="font-family: 'Cinzel'">CONTACT</a>
+                    <a href="{% url 'contact' %}" class="text-gray-900  hover:underline" style="font-family: 'Cinzel'">CONTACT</a>
                 </li>
             </ul>
         </div>
