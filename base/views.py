@@ -57,7 +57,7 @@ def contactPage(request):
 
         html_content = get_template('base/email.html').render(context_data)
 
-        msg = EmailMultiAlternatives(subject, message, email, ['sanducalinm@gmail.com'])
+        msg = EmailMultiAlternatives(subject, message, email, ['office@floraria-adriana.ro'])
         msg.attach_alternative(html_content, "text/html")
         for f in files:
             msg.attach(f.name, f.read(), f.content_type)
